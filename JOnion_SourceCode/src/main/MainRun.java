@@ -32,9 +32,9 @@ public class MainRun {
 		// VisitPackage("/Users/emad/Documents/MSED_Workspace/Calculate Code Metrics/testcase/");
 		// vf.returnMetrics().printMetrics();
 
-		String[] projectDirs = { "/Users/emad/Documents/MSED_Workspace/JAIM-0.4b/",
-				"/Users/emad/Documents/MSED_Workspace/jtcgui-8/",
-				"/Users/emad/Documents/MSED_Workspace/proguard-code/src/" };
+		String[] projectDirs = { arg[0] + "/JAIM-0.4b/",
+				arg[1] + "/jtcgui-8/",
+				arg[2] + "/proguard-code/src/" };
 
 		VisitProject vp = new VisitProject(projectDirs[2]);
 		StoreMetrics st = vp.returnMetrics();
