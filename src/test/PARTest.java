@@ -1,0 +1,35 @@
+package test;
+
+import static org.junit.Assert.*;
+import japa.parser.JavaParser;
+import japa.parser.ParseException;
+import japa.parser.ast.CompilationUnit;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+
+import org.junit.Test;
+
+import visitors.VisitClasses;
+
+public class PARTest {
+
+	@Test
+	public void parTest1_simpleTest() throws ParseException, IOException {
+		VisitClasses vc = new VisitClasses("parTest1_simpleTest.java");
+		CompilationUnit cu = JavaParser.parse(new File(AllTests.folder + "parTest1_simpleTest.java"));
+		vc.visit(cu, 0);
+		Map<String, List<Double>> metrics = vc.returnMetrics().getAggregatedList();
+		List<Double> parValues = metrics.get("PAR");
+		double total = parValues.get(0);
+		double max = parValues.get(1);
+		double avg = parValues.get(2);
+		
+		assertEquals(22, total, 0.001);
+		assertEquals(6, max, 0.001);
+		assertEquals(22.0 / 8, avg, 0.001);
+	}
+
+}
