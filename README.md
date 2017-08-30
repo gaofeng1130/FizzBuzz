@@ -1,10 +1,10 @@
 # JOnion
 
-JOnion: Code Metrics Calculation
+## JOnion: Code Metrics Calculation
 
 -------------------------------------------
 
-Paper and presentation:
+### Paper and presentation:
 
 FinalProject_Report.pdf => our final report for the project including all the details of project explained.
 
@@ -16,7 +16,7 @@ TestPlan.xlsx => The excel file representing coverage table and test plan includ
 
 ----------------------------------------------------
 
-Data source and other metrics tools:
+### Data source and other metrics tools:
 
 DataSet.zip => Contains three test software projects used to calculate metrics and evaluate our tool.
 
@@ -24,7 +24,7 @@ OtherTools => the three popular open-source metrics calcuation tools which is co
 
 ----------------------------------------------------
 
-Reproduce the metrics results based on dataset:
+### Reproduce the metrics results based on dataset:
 
 Dowload the DataSet.zip and unzip it.
 
